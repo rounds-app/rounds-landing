@@ -41,7 +41,6 @@
         </svg><span aria-hidden="true">unds</span>
       </h1>
       <p class="tagline">Practice the patient visit before the real one.</p>
-      <p class="subline">Virtual patients that only say what faculty approved.</p>
       <p class="award">2nd place, TwinVerse track, Rutgers Health Hack 2026</p>
     </header>
 
@@ -53,36 +52,35 @@
         </video>
       </section>
 
-      <section class="how">
-        <h2>How it works</h2>
+      <section class="how" aria-labelledby="how-title">
+        <h2 id="how-title" class="visually-hidden">How it works</h2>
         <ol class="steps">
           <li class="card">
             <span class="num">1</span>
-            <h3>Faculty describe a patient</h3>
-            <p>Say who the patient is out loud, review the facts Rounds drafts, and approve the case.</p>
+            <div>
+              <h3>Faculty describe a patient</h3>
+              <p>Say who the patient is out loud, then approve the facts.</p>
+            </div>
           </li>
           <li class="card">
             <span class="num">2</span>
-            <h3>Students interview by voice</h3>
-            <p>The student talks to the patient hands-free, the way they would in a clinic room.</p>
+            <div>
+              <h3>Students interview by voice</h3>
+              <p>Hands-free, the way they would in a clinic room.</p>
+            </div>
           </li>
           <li class="card">
             <span class="num">3</span>
-            <h3>Feedback that quotes the conversation</h3>
-            <p>The debrief scores seven communication domains, and every score quotes what the student said.</p>
+            <div>
+              <h3>Feedback that quotes the conversation</h3>
+              <p>Seven communication domains, each score backed by a quote.</p>
+            </div>
           </li>
         </ol>
+        <p class="grounding">Every patient line cites a fact faculty approved; code decides what&rsquo;s true, the model only phrases it.</p>
       </section>
 
-      <section class="grounding">
-        <h2>Nothing is invented</h2>
-        <p>Every line a patient says cites a fact faculty approved. Code decides which facts are true and when they can be shared; the language model only phrases them. A checker reviews each reply before it is spoken; a reply that fails is replaced with one built directly from the approved facts.</p>
-      </section>
-
-      <footer>
-        <p>All patients are synthetic.</p>
-        <p>&copy; 2026 Rounds</p>
-      </footer>
+      <footer>All patients are synthetic. &copy; 2026 Rounds</footer>
     </main>
   </body>
 </html>
