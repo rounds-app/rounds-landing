@@ -1,0 +1,220 @@
+/* Tokens match the Rounds app (frontend/src/index.css). */
+:root {
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+  --ink: #191f5c;
+  --ink-soft: #3a4282;
+  --muted: #646b9e;
+  --indigo: #4a5fd9;
+  --indigo-soft: #ebeefd;
+  --indigo-line: #7d8fe6;
+  --line: #e2e5f3;
+  --paper: #fdfbf8;
+  --card: #ffffff;
+  --select: #d9defa;
+  --wash-a: rgba(255, 184, 130, 0.28);
+  --wash-b: rgba(140, 132, 226, 0.22);
+  --shadow-lift: 0 1px 2px rgb(25 31 92 / 0.06), 0 16px 36px -20px rgb(25 31 92 / 0.42);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #eeeff4;
+    --ink-soft: #b9bacb;
+    --muted: #9a9baf;
+    --indigo: #93a0ff;
+    --indigo-soft: #262a4a;
+    --indigo-line: #5a66b0;
+    --line: #2c2c3a;
+    --paper: #16161c;
+    --card: #1f1f29;
+    --select: #2b3162;
+    --wash-a: rgba(217, 138, 58, 0.12);
+    --wash-b: rgba(109, 131, 240, 0.14);
+    --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.3), 0 16px 36px -20px rgb(0 0 0 / 0.7);
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 19px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--select);
+}
+
+h1,
+h2,
+h3,
+p,
+ol {
+  margin: 0;
+}
+
+/* Hero: the dawn wash from the app's backdrop, kept faint. */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: clamp(56px, 10vw, 112px) 16px clamp(36px, 6vw, 56px);
+  text-align: center;
+  background:
+    radial-gradient(60% 260px at 30% 0%, var(--wash-a), transparent),
+    radial-gradient(50% 240px at 80% 0%, var(--wash-b), transparent);
+}
+
+/* "Rounds" with the dawn disc standing in for the o, as in the app. */
+.wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  font-size: clamp(72px, 12vw, 128px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.disc {
+  width: 0.56em;
+  height: 0.56em;
+  margin: 0 0.02em;
+  flex-shrink: 0;
+  align-self: baseline;
+  transform: translateY(0.02em);
+}
+
+.tagline {
+  max-width: 22ch;
+  text-wrap: balance;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.award {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  text-wrap: balance;
+}
+
+main {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: #000;
+  box-shadow: var(--shadow-lift);
+}
+
+section + section {
+  margin-top: clamp(56px, 8vw, 96px);
+}
+
+h2 {
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px;
+  border: 1px solid color-mix(in srgb, var(--indigo-line) 40%, transparent);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: var(--shadow-lift);
+}
+
+.num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--indigo-soft);
+  color: var(--indigo);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+.card p {
+  color: var(--ink-soft);
+}
+
+.grounding {
+  max-width: 680px;
+}
+
+.grounding p {
+  margin-top: 16px;
+  font-size: clamp(19px, 1.6vw, 21px);
+  color: var(--ink-soft);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  max-width: 1040px;
+  margin: clamp(64px, 10vw, 120px) auto 0;
+  padding: 24px 16px 40px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+a {
+  color: var(--indigo);
+}

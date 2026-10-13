@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rounds</title>
+    <meta name="description" content="Voice-based virtual patients for clinical education. Faculty describe a patient out loud, students interview that patient by voice, and the feedback quotes the conversation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rounds" />
+    <meta property="og:description" content="Virtual patients that only say what faculty approved." />
+    <meta property="og:image" content="assets/rounds-demo-poster.jpg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1 class="wordmark" aria-label="Rounds">
+        <span aria-hidden="true">R</span><svg class="disc" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#ffcf7f" />
+              <stop offset="0.5" stop-color="#ff9466" />
+              <stop offset="0.8" stop-color="#ef8aa0" />
+            </linearGradient>
+            <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#a888dc" />
+              <stop offset="0.45" stop-color="#6f6fd0" />
+              <stop offset="1" stop-color="#3550a8" />
+            </linearGradient>
+            <clipPath id="clip"><circle cx="50" cy="50" r="50" /></clipPath>
+          </defs>
+          <g clip-path="url(#clip)">
+            <rect width="100" height="100" fill="url(#sky)" />
+            <path d="M0 62 C 22 54, 38 48, 58 47 S 88 52, 100 56 V100 H0Z" fill="url(#hill)" />
+          </g>
+        </svg><span aria-hidden="true">unds</span>
+      </h1>
+      <p class="tagline">Virtual patients that only say what faculty approved.</p>
+      <p class="award">2nd place, TwinVerse track, Rutgers Health Hack 2026</p>
+    </header>
+
+    <main>
+      <section class="demo" aria-label="Demo video">
+        <video controls preload="metadata" playsinline poster="assets/rounds-demo-poster.jpg">
+          <source src="assets/rounds-demo.mp4" type="video/mp4" />
+          Your browser can't play this video. <a href="assets/rounds-demo.mp4">Download the demo</a>.
+        </video>
+      </section>
+
+      <section class="how">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li class="card">
+            <span class="num">1</span>
+            <h3>Faculty describe a patient</h3>
+            <p>Say who the patient is out loud, review the facts Rounds drafts, and approve the case.</p>
+          </li>
+          <li class="card">
+            <span class="num">2</span>
+            <h3>Students interview by voice</h3>
+            <p>The student talks to the patient hands-free, the way they would in a clinic room.</p>
+          </li>
+          <li class="card">
+            <span class="num">3</span>
+            <h3>Feedback that quotes the conversation</h3>
+            <p>The debrief scores seven communication domains, and every score quotes what the student said.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="grounding">
+        <h2>Nothing is invented</h2>
+        <p>Every line a patient says cites a fact faculty approved. Code decides which facts are true and when they can be shared; the language model only phrases them. A checker reviews each reply before it is spoken; a reply that fails is replaced with one built directly from the approved facts.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>All patients are synthetic.</p>
+      <p>&copy; 2026 Rounds</p>
+    </footer>
+  </body>
+</html>
