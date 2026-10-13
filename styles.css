@@ -30,7 +30,7 @@ body {
   margin: 0;
   --art-w: max(100vw, 1100px);
   background:
-    linear-gradient(to bottom, var(--paper), transparent 45%) center bottom / var(--art-w) calc(var(--art-w) * 0.5628) no-repeat,
+    linear-gradient(to bottom, var(--paper) 6px, transparent 45%) center bottom / var(--art-w) calc(var(--art-w) * 0.5628 + 6px) no-repeat,
     url("assets/world.jpg") center bottom / var(--art-w) calc(var(--art-w) * 0.5628) no-repeat,
     var(--paper);
   background-attachment: scroll;
@@ -65,7 +65,7 @@ ol {
   padding: 72px 16px 160px;
   text-align: center;
   background:
-    linear-gradient(to bottom, transparent 70%, var(--paper)),
+    linear-gradient(to bottom, transparent 70%, var(--paper) calc(100% - 6px)),
     url("assets/world.jpg") center / cover no-repeat;
 }
 
