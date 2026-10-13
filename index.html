@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
     <title>Rounds</title>
     <meta name="description" content="Voice-based virtual patients for clinical education. Faculty describe a patient out loud, students interview that patient by voice, and the feedback quotes the conversation." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Rounds" />
     <meta property="og:description" content="Virtual patients that only say what faculty approved." />
-    <meta property="og:image" content="assets/rounds-demo-poster.jpg" />
+    <meta property="og:url" content="https://rounds-app.github.io/rounds-landing/" />
+    <meta property="og:image" content="https://rounds-app.github.io/rounds-landing/assets/rounds-demo-poster.jpg" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,11 +40,12 @@
           </g>
         </svg><span aria-hidden="true">unds</span>
       </h1>
-      <p class="tagline">Virtual patients that only say what faculty approved.</p>
+      <p class="tagline">Practice the patient visit before the real one.</p>
+      <p class="subline">Virtual patients that only say what faculty approved.</p>
       <p class="award">2nd place, TwinVerse track, Rutgers Health Hack 2026</p>
     </header>
 
-    <main>
+    <main class="sheet">
       <section class="demo" aria-label="Demo video">
         <video controls preload="metadata" playsinline poster="assets/rounds-demo-poster.jpg">
           <source src="assets/rounds-demo.mp4" type="video/mp4" />
@@ -75,11 +78,11 @@
         <h2>Nothing is invented</h2>
         <p>Every line a patient says cites a fact faculty approved. Code decides which facts are true and when they can be shared; the language model only phrases them. A checker reviews each reply before it is spoken; a reply that fails is replaced with one built directly from the approved facts.</p>
       </section>
-    </main>
 
-    <footer>
-      <p>All patients are synthetic.</p>
-      <p>&copy; 2026 Rounds</p>
-    </footer>
+      <footer>
+        <p>All patients are synthetic.</p>
+        <p>&copy; 2026 Rounds</p>
+      </footer>
+    </main>
   </body>
 </html>
