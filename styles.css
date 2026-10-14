@@ -109,9 +109,10 @@ ol {
 
 .award {
   font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 20px rgb(255 255 255 / 0.9);
   text-wrap: balance;
 }
 
@@ -140,6 +141,7 @@ ol {
 
 .steps {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 12px;
   padding: 0;
