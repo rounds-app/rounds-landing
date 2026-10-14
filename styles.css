@@ -146,11 +146,18 @@ ol {
   list-style: none;
 }
 
+/* Same card as the Welcome screen's role cards, compacted to one row. */
 .card {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 4px 8px;
+  padding: 14px 16px;
+  border: 1px solid rgb(125 143 230 / 0.4);
+  border-radius: 18px;
+  background: rgb(255 255 255 / 0.85);
+  box-shadow: 0 24px 60px -34px rgba(25, 31, 92, 0.45);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 /* Step number on a disc of the sky painting, like the role card icons. */
