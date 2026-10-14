@@ -125,12 +125,6 @@ ol {
   max-width: 1120px;
   margin: -80px auto 32px;
   padding: 16px;
-  border: 1px solid rgb(255 255 255 / 0.7);
-  border-radius: 28px;
-  background: var(--sheet);
-  box-shadow: var(--shadow-lift);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
 }
 
 .demo video {
@@ -139,7 +133,7 @@ ol {
   height: auto;
   aspect-ratio: 16 / 9;
   border-radius: 18px;
-  border: 1px solid var(--line);
+  border: 6px solid #fff;
   background: #000;
   box-shadow: var(--shadow-lift);
 }
@@ -152,18 +146,11 @@ ol {
   list-style: none;
 }
 
-/* Same card as the Welcome screen's role cards, compacted to one row. */
 .card {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding: 14px 16px;
-  border: 1px solid rgb(125 143 230 / 0.4);
-  border-radius: 18px;
-  background: rgb(255 255 255 / 0.85);
-  box-shadow: 0 24px 60px -34px rgba(25, 31, 92, 0.45);
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  padding: 4px 8px;
 }
 
 /* Step number on a disc of the sky painting, like the role card icons. */
@@ -224,7 +211,10 @@ a {
     height: 100vh;
     height: 100dvh;
     overflow: hidden;
-    background: var(--paper) url("assets/world.jpg") center / cover no-repeat;
+    /* A soft paper glow under the steps keeps the text readable over the painted trees. */
+    background:
+      radial-gradient(ellipse 52% 26% at 50% 88%, rgba(253, 251, 248, 0.95), rgba(253, 251, 248, 0.75) 55%, transparent 100%),
+      var(--paper) url("assets/world.jpg") center / cover no-repeat;
   }
 
   .hero {
