@@ -19,7 +19,7 @@
   </head>
   <body>
     <header class="hero">
-      <h1 class="wordmark" aria-label="Rounds">
+      <h1 class="wordmark reveal" aria-label="Rounds">
         <span aria-hidden="true">R</span><svg class="disc" viewBox="0 0 100 100" aria-hidden="true">
           <defs>
             <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
@@ -40,12 +40,12 @@
           </g>
         </svg><span aria-hidden="true">unds</span>
       </h1>
-      <p class="tagline">Practice the patient visit before the real one.</p>
-      <p class="award">2nd place, TwinVerse track, Rutgers Health Hack 2026</p>
+      <p class="tagline reveal" style="--d: 120ms">Practice the patient visit before the real one.</p>
+      <p class="award reveal" style="--d: 220ms">2nd place, TwinVerse track, Rutgers Health Hack 2026</p>
     </header>
 
     <main class="sheet">
-      <section class="demo" aria-label="Demo video">
+      <section class="demo reveal" style="--d: 320ms" aria-label="Demo video">
         <video controls preload="metadata" playsinline poster="assets/rounds-demo-poster.jpg">
           <source src="assets/rounds-demo.mp4" type="video/mp4" />
           Your browser can't play this video. <a href="assets/rounds-demo.mp4">Download the demo</a>.
@@ -55,21 +55,21 @@
       <section class="how" aria-labelledby="how-title">
         <h2 id="how-title" class="visually-hidden">How it works</h2>
         <ol class="steps">
-          <li class="card">
+          <li class="card reveal" style="--d: 420ms">
             <span class="num">1</span>
             <div>
               <h3>Faculty describe a patient</h3>
               <p>Say who the patient is out loud, then approve the facts.</p>
             </div>
           </li>
-          <li class="card">
+          <li class="card reveal" style="--d: 500ms">
             <span class="num">2</span>
             <div>
               <h3>Students interview by voice</h3>
               <p>Hands-free, the way they would in a clinic room.</p>
             </div>
           </li>
-          <li class="card">
+          <li class="card reveal" style="--d: 580ms">
             <span class="num">3</span>
             <div>
               <h3>Feedback with quotes</h3>
@@ -77,10 +77,18 @@
             </div>
           </li>
         </ol>
-        <p class="grounding">Every patient line cites a fact faculty approved; code decides what&rsquo;s true, the model only phrases it.</p>
+        <p class="grounding reveal" style="--d: 700ms">The patient only says what faculty approved. Code picks the facts, and the model just puts them into words.</p>
       </section>
 
-      <footer>All patients are synthetic. &copy; 2026 Rounds</footer>
+      <section class="contact reveal" style="--d: 800ms" aria-labelledby="contact-title">
+        <div>
+          <h2 id="contact-title">Get in touch</h2>
+          <p>Questions, ideas, or want to try Rounds with your students? We&rsquo;d love to hear from you.</p>
+        </div>
+        <a class="cta" href="mailto:contact@roundshealth.org"><span class="cta-lead">Email us at </span>contact@roundshealth.org <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      </section>
+
+      <footer class="reveal" style="--d: 900ms">All patients are synthetic. &copy; 2026 Rounds</footer>
     </main>
   </body>
 </html>

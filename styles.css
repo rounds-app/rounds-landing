@@ -222,6 +222,142 @@ a {
   color: #4a5fd9;
 }
 
+/* Closing call to action: one line and a button that opens an email. */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  text-shadow: 0 0 6px #fff, 0 0 14px #fff;
+}
+
+.contact p {
+  margin-top: 2px;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  text-shadow: 0 0 6px #fff, 0 0 14px #fff;
+  text-wrap: balance;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  box-shadow: var(--shadow-lift);
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.cta:hover {
+  background: #2a3290;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgb(25 31 92 / 0.08), 0 20px 40px -18px rgb(25 31 92 / 0.55);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+.cta:focus-visible {
+  outline: 3px solid #7d8fe6;
+  outline-offset: 3px;
+}
+
+/* On phones the heading already says what the button is for, so just the address fits on one line. */
+@media (max-width: 479px) {
+  .cta-lead {
+    display: none;
+  }
+}
+
+.cta .arrow {
+  transition: transform 200ms ease;
+}
+
+.cta:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Motion: each piece rises into place in reading order on load, the hill in the disc rises
+   like dawn, and cards lift a little under the pointer. Fill is backwards-only so the hover
+   transforms still apply once the entrance has played. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+@keyframes dawn {
+  from {
+    transform: translateY(18px);
+  }
+}
+
+.reveal {
+  animation: rise 700ms cubic-bezier(0.2, 0.7, 0.2, 1) var(--d, 0ms) backwards;
+}
+
+.disc path {
+  animation: dawn 1400ms cubic-bezier(0.2, 0.7, 0.2, 1) 150ms backwards;
+}
+
+.card {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgb(125 143 230 / 0.7);
+  box-shadow: 0 28px 60px -30px rgba(25, 31, 92, 0.55);
+}
+
+.num {
+  transition: transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.card:hover .num {
+  transform: scale(1.08);
+}
+
+/* Phones and tablets scroll, so below the fold things rise as they come into view instead. */
+@supports (animation-timeline: view()) {
+  @media (max-width: 1023px) {
+    .sheet .reveal {
+      animation: rise linear backwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* Desktop: one screen, no scrolling. The painting fills the window, and the video takes
    whatever height is left after the hero, the steps and the footer. */
 @media (min-width: 1024px) {
@@ -281,5 +417,21 @@ a {
 
   .grounding {
     margin-top: clamp(8px, 1.4vh, 12px);
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+  .contact h2 {
+    font-size: clamp(19px, 2.6vh, 22px);
+  }
+
+  .contact p {
+    font-size: clamp(15px, 2.1vh, 17px);
+  }
+
+  .cta {
+    padding: clamp(8px, 1.3vh, 11px) 22px;
   }
 }
