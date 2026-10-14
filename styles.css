@@ -222,12 +222,18 @@ a {
   color: #4a5fd9;
 }
 
-/* Closing call to action: the heading on its own line, a welcome under it, then the button. */
+/* Closing call to action on the same white card as the steps: the heading, a welcome under it,
+   then the button on its own line. */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
+  padding: 20px 16px 22px;
+  border: 1px solid rgb(125 143 230 / 0.4);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 60px -34px rgba(25, 31, 92, 0.45);
   text-align: center;
 }
 
@@ -236,15 +242,12 @@ a {
   font-weight: 500;
   line-height: 1.25;
   letter-spacing: -0.3px;
-  text-shadow: 0 0 6px #fff, 0 0 14px #fff;
 }
 
 .contact p {
-  margin-top: 4px;
   font-size: 17px;
   line-height: 1.35;
   color: var(--ink-soft);
-  text-shadow: 0 0 6px #fff, 0 0 14px #fff;
   text-wrap: balance;
 }
 
@@ -425,7 +428,8 @@ a {
   }
 
   .contact {
-    gap: clamp(8px, 1.4vh, 14px);
+    gap: clamp(6px, 1.2vh, 12px);
+    padding: clamp(12px, 2vh, 20px) 16px clamp(14px, 2.2vh, 22px);
   }
 
   .contact h2 {
