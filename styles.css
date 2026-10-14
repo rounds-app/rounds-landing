@@ -193,17 +193,21 @@ h3 {
 
 .grounding {
   margin-top: 12px;
-  font-size: 17px;
+  font-size: 19px;
+  font-weight: 500;
   line-height: 1.4;
-  color: var(--ink-soft);
+  color: var(--ink);
+  text-shadow: 0 0 6px #fff, 0 0 14px #fff;
   text-align: center;
   text-wrap: balance;
 }
 
 footer {
   font-family: var(--font-sans);
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff;
   text-align: center;
 }
 
@@ -234,7 +238,7 @@ a {
   }
 
   .wordmark {
-    font-size: clamp(56px, min(7vw, 10vh), 96px);
+    font-size: clamp(44px, min(4.5vw, 6.5vh), 60px);
   }
 
   .tagline {
