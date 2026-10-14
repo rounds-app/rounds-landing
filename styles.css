@@ -199,7 +199,7 @@ h3 {
 }
 
 .grounding {
-  margin-top: 16px;
+  margin-top: 0;
   font-size: 19px;
   font-weight: 500;
   line-height: 1.4;
@@ -423,8 +423,9 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* The caption sits close under the video it describes. */
   .grounding {
-    margin-top: calc(var(--space) * 0.6);
+    margin-top: calc(var(--space) * -0.5);
   }
 
   /* On desktop the contact card is one slim row, so the video keeps the height. */
