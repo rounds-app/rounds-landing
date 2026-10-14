@@ -371,7 +371,7 @@ a {
     overflow: hidden;
     /* One spacing step for every main gap; on tall windows the page sits centered and the
        leftover height goes to the top and bottom edges. */
-    --space: clamp(14px, 2.8vh, 32px);
+    --space: clamp(10px, 2vh, 24px);
     justify-content: center;
     /* A soft paper glow under the steps keeps the text readable over the painted trees. */
     background:
@@ -427,20 +427,38 @@ a {
     margin-top: calc(var(--space) * 0.6);
   }
 
+  /* On desktop the contact card is one slim row, so the video keeps the height. */
   .contact {
-    gap: clamp(6px, 1.2vh, 12px);
-    padding: clamp(12px, 2vh, 20px) 16px clamp(14px, 2.2vh, 22px);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 24px;
+    row-gap: 2px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 12px 10px 22px;
+    text-align: left;
   }
 
   .contact h2 {
-    font-size: clamp(21px, 3vh, 26px);
+    font-size: 20px;
   }
 
   .contact p {
-    font-size: clamp(15px, 2.1vh, 17px);
+    grid-column: 1;
+    font-size: 15px;
+    white-space: nowrap;
   }
 
   .cta {
-    padding: clamp(8px, 1.3vh, 11px) 22px;
+    grid-column: 2;
+    grid-row: 1 / 3;
+    padding: 9px 18px;
+    font-size: 15px;
+  }
+
+  .cta-lead {
+    display: none;
   }
 }
