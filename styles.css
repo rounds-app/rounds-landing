@@ -107,6 +107,16 @@ ol {
   text-wrap: balance;
 }
 
+/* The two things that set Rounds apart, in one plain line under the tagline. */
+.diff {
+  max-width: 44ch;
+  font-size: 18px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff;
+  text-wrap: balance;
+}
+
 .award {
   font-family: var(--font-sans);
   font-size: 15px;
@@ -494,7 +504,8 @@ a {
     font-size: 64px;
   }
 
-  .tagline {
+  .tagline,
+  .diff {
     max-width: none;
   }
 
@@ -505,8 +516,8 @@ a {
 
   /* The video fills the width, but no taller than what is left of the window under the hero. */
   .demo video {
-    width: min(100% - 24px, max(560px, (100vh - 330px) * 16 / 9));
-    width: min(100% - 24px, max(560px, (100svh - 330px) * 16 / 9));
+    width: min(100% - 24px, max(560px, (100vh - 370px) * 16 / 9));
+    width: min(100% - 24px, max(560px, (100svh - 370px) * 16 / 9));
     margin: 0 auto;
   }
 
