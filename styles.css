@@ -199,6 +199,149 @@ h3 {
 }
 
 
+.section-title {
+  margin-bottom: 16px;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* Two real screens from the app, framed like the video. */
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.shot {
+  margin: 0;
+}
+
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+  border: 8px solid #fff;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-lift);
+}
+
+.shot figcaption {
+  margin-top: 10px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-soft);
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* Reasons read as a plain list on the paper, ruled like a notebook, two columns on wide screens. */
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 40px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.reasons > div {
+  padding: 14px 0 16px;
+  border-top: 1px solid var(--line);
+}
+
+.reasons dt {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.reasons dd {
+  margin: 4px 0 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.card-panel {
+  border: 1px solid rgb(125 143 230 / 0.4);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 24px 60px -34px rgba(25, 31, 92, 0.45);
+}
+
+.faculty,
+.contact {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.faculty {
+  padding: 24px 20px 26px;
+}
+
+.faculty .section-title {
+  margin-bottom: 4px;
+}
+
+.lede {
+  font-size: 17px;
+  color: var(--ink-soft);
+  text-align: center;
+  text-wrap: balance;
+}
+
+.flow {
+  display: grid;
+  gap: 8px;
+  max-width: 560px;
+  margin: 18px auto 0;
+  padding-left: 1.4em;
+  font-size: 17px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+
+.contact .alt {
+  font-size: 15px;
+}
+
+/* Small text links across the top of the hero. */
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 20px;
+  margin-bottom: 18px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.topnav a {
+  color: var(--ink);
+  text-decoration: none;
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff;
+}
+
+.topnav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero .cta {
+  margin-top: 8px;
+}
+
 footer {
   font-family: var(--font-sans);
   font-size: 14px;
@@ -273,13 +416,6 @@ a {
   outline-offset: 3px;
 }
 
-/* On phones the heading already says what the button is for, so just the address fits on one line. */
-@media (max-width: 479px) {
-  .cta-lead {
-    display: none;
-  }
-}
-
 .cta .arrow {
   transition: transform 200ms ease;
 }
@@ -330,14 +466,12 @@ a {
   transform: scale(1.08);
 }
 
-/* Phones and tablets scroll, so below the fold things rise as they come into view instead. */
+/* Below the fold, things rise as they come into view instead. */
 @supports (animation-timeline: view()) {
-  @media (max-width: 1023px) {
-    .sheet .reveal {
-      animation: rise linear backwards;
-      animation-timeline: view();
-      animation-range: entry 0% entry 60%;
-    }
+  .sheet .reveal {
+    animation: rise linear backwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
   }
 }
 
@@ -350,103 +484,39 @@ a {
   }
 }
 
-/* Desktop: one screen, no scrolling. The painting fills the window, and the video takes
-   whatever height is left after the hero, the steps and the footer. */
+/* Desktop: the hero and the video share the first screen; the rest of the page scrolls below. */
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden;
-    /* One spacing step for every main gap; on tall windows the page sits centered and the
-       leftover height goes to the top and bottom edges. */
-    --space: clamp(10px, 2vh, 24px);
-    justify-content: center;
-    /* A soft paper glow under the steps keeps the text readable over the painted trees. */
-    background:
-      radial-gradient(ellipse 52% 26% at 50% 88%, rgba(253, 251, 248, 0.95), rgba(253, 251, 248, 0.75) 55%, transparent 100%),
-      var(--paper) url("assets/world.jpg") center / cover no-repeat;
-  }
-
   .hero {
-    flex: none;
-    gap: 6px;
-    padding: var(--space) 16px 0;
-    background: none;
+    padding: 32px 16px 100px;
   }
 
   .wordmark {
-    font-size: clamp(44px, min(4.5vw, 6.5vh), 60px);
+    font-size: 64px;
   }
 
   .tagline {
     max-width: none;
-    font-size: clamp(22px, min(2.2vw, 3.6vh), 32px);
   }
 
   .sheet {
-    flex: 0 1 auto;
-    min-height: 0;
-    gap: var(--space);
-    margin: 0 auto;
-    padding: var(--space) 20px;
+    gap: 56px;
+    padding: 16px 20px;
   }
 
-  /* As tall as the widest frame the sheet allows; on shorter windows it gives up height first. */
-  .demo {
-    flex: 0 1 auto;
-    min-height: 0;
-    height: calc((min(100vw - 32px, 1120px) - 64px) * 9 / 16 + 24px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    container-type: size;
-  }
-
-  /* The largest 16:9 frame that fits the space left over. */
+  /* The video fills the width, but no taller than what is left of the window under the hero. */
   .demo video {
-    width: min(100cqw - 24px, (100cqh - 24px) * 16 / 9);
+    width: min(100% - 24px, max(560px, (100vh - 330px) * 16 / 9));
+    width: min(100% - 24px, max(560px, (100svh - 330px) * 16 / 9));
+    margin: 0 auto;
   }
 
   .steps {
     grid-template-columns: repeat(3, 1fr);
   }
 
-
-  /* On desktop the contact card is one slim row, so the video keeps the height. */
-  .contact {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    column-gap: 24px;
-    row-gap: 2px;
-    width: fit-content;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px 12px 10px 22px;
-    text-align: left;
-  }
-
-  .contact h2 {
-    font-size: 20px;
-  }
-
-  .contact p {
-    grid-column: 1;
-    font-size: 15px;
-    white-space: nowrap;
-  }
-
-  .cta {
-    grid-column: 2;
-    grid-row: 1 / 3;
-    padding: 9px 18px;
-    font-size: 15px;
-  }
-
-  .cta-lead {
-    display: none;
+  .topnav {
+    align-self: flex-end;
+    margin: -16px 8px 8px 0;
   }
 }
 
