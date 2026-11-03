@@ -19,6 +19,11 @@
   </head>
   <body>
     <header class="hero">
+      <nav class="topnav reveal" aria-label="Main">
+        <a href="#how-title">How it works</a>
+        <a href="#faculty-title">For faculty</a>
+        <a href="request-demo.html">Request a demo</a>
+      </nav>
       <h1 class="wordmark reveal" aria-label="Rounds">
         <span aria-hidden="true">R</span><svg class="disc" viewBox="0 0 100 100" aria-hidden="true">
           <defs>
@@ -41,51 +46,105 @@
         </svg><span aria-hidden="true">unds</span>
       </h1>
       <p class="tagline reveal" style="--d: 120ms">Practice the patient visit before the real one.</p>
+      <p class="diff reveal" style="--d: 170ms">The patient can only say what faculty approved. Every score quotes the student&rsquo;s own words.</p>
       <p class="award reveal" style="--d: 220ms">2nd place, TwinVerse track, Rutgers Health Hack 2026</p>
+      <a class="cta reveal" style="--d: 280ms" href="request-demo.html">Request a demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
     </header>
 
     <main class="sheet">
       <section class="demo reveal" style="--d: 320ms" aria-label="Demo video">
         <video controls preload="metadata" playsinline poster="assets/rounds-demo-poster.jpg">
-          <source src="assets/rounds-demo.mp4" type="video/mp4" />
-          Your browser can't play this video. <a href="assets/rounds-demo.mp4">Download the demo</a>.
+          <source src="assets/rounds-demo-trimmed.mp4" type="video/mp4" />
+          Your browser can't play this video. <a href="assets/rounds-demo-trimmed.mp4">Download the demo</a>.
         </video>
       </section>
 
       <section class="how" aria-labelledby="how-title">
-        <h2 id="how-title" class="visually-hidden">How it works</h2>
+        <h2 id="how-title" class="section-title reveal">How it works</h2>
         <ol class="steps">
           <li class="card reveal" style="--d: 420ms">
             <span class="num">1</span>
             <div>
               <h3>Faculty describe a patient</h3>
-              <p>Describe them out loud, then approve the only facts they can share.</p>
+              <p>Say who the patient is and what students should practice. Rounds drafts the case, and you approve what the patient can say.</p>
             </div>
           </li>
           <li class="card reveal" style="--d: 500ms">
             <span class="num">2</span>
             <div>
-              <h3>Students interview by voice</h3>
-              <p>Hands-free, the way they would in a clinic room.</p>
+              <h3>Students talk with the patient</h3>
+              <p>Out loud and hands-free, the way they would in a clinic room.</p>
             </div>
           </li>
           <li class="card reveal" style="--d: 580ms">
             <span class="num">3</span>
             <div>
-              <h3>Feedback with quotes</h3>
-              <p>Scores on seven communication skills, each one backed by a quote.</p>
+              <h3>The debrief quotes the student</h3>
+              <p>Seven communication scores, each shown with the line from the transcript it&rsquo;s based on.</p>
             </div>
           </li>
         </ol>
+        <div class="shots">
+          <figure class="shot reveal">
+            <img src="assets/app-describe.jpg" width="1400" height="797" loading="lazy" alt="Rounds case builder: a faculty member's spoken description of a patient, and the case Rounds drafted from it." />
+            <figcaption>Faculty describe the patient; Rounds drafts the case.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img src="assets/app-visit.jpg" width="1400" height="783" loading="lazy" alt="A student's visit in Rounds: the patient on screen, with the chart, vitals and a live transcript around it." />
+            <figcaption>Students talk with the patient, chart and transcript alongside.</figcaption>
+          </figure>
+        </div>
       </section>
 
-      <section class="contact reveal" style="--d: 800ms" aria-labelledby="contact-title">
-        <h2 id="contact-title">Get in touch</h2>
-        <p>Want to try Rounds with your students, or just have a question? We&rsquo;d love to hear from you.</p>
-        <a class="cta" href="mailto:contact@roundshealth.org"><span class="cta-lead">Email us at </span>contact@roundshealth.org <span class="arrow" aria-hidden="true">&rarr;</span></a>
+      <section class="why" aria-labelledby="why-title">
+        <h2 id="why-title" class="section-title reveal">Why schools choose Rounds</h2>
+        <dl class="reasons reveal">
+          <div>
+            <dt>No invented findings</dt>
+            <dd>Before the student hears a reply, Rounds checks it against the facts faculty approved. A reply that adds anything else is blocked and never reaches the student.</dd>
+          </div>
+          <div>
+            <dt>Scores tied to what was said</dt>
+            <dd>The debrief uses the standard 7-domain communication rubric. Each score quotes the line from the student&rsquo;s own transcript that it&rsquo;s based on.</dd>
+          </div>
+          <div>
+            <dt>Faculty have the last word</dt>
+            <dd>Faculty read the feedback first and can change any score before the student sees it.</dd>
+          </div>
+          <div>
+            <dt>A case in minutes</dt>
+            <dd>Faculty describe the patient in a conversation. There&rsquo;s no curriculum to upload first, though you can attach your own files.</dd>
+          </div>
+          <div>
+            <dt>Second visits follow on</dt>
+            <dd>A follow-up visit changes depending on what the student did in the first one.</dd>
+          </div>
+          <div>
+            <dt>Practice before SP sessions</dt>
+            <dd>Students get more practice taking a history and explaining a plan in the weeks before their standardized-patient sessions. The SP sessions themselves stay as they are.</dd>
+          </div>
+        </dl>
       </section>
 
-      <footer class="reveal" style="--d: 900ms">&copy; 2026 Rounds</footer>
+      <section class="faculty card-panel reveal" aria-labelledby="faculty-title">
+        <h2 id="faculty-title" class="section-title">For faculty</h2>
+        <p class="lede">You decide what each patient knows and what each student sees.</p>
+        <ol class="flow">
+          <li>Describe the patient and the learning goals, by voice or by typing.</li>
+          <li>Check the draft case and approve the facts the patient can share.</li>
+          <li>Assign it to a class.</li>
+          <li>Read each debrief, change any score you disagree with, then release it to the student.</li>
+        </ol>
+      </section>
+
+      <section class="contact reveal" aria-labelledby="contact-title">
+        <h2 id="contact-title">Try Rounds at your school</h2>
+        <p>Interested in a pilot with your students, or have a question? We&rsquo;d love to hear from you.</p>
+        <a class="cta" href="request-demo.html">Request a demo <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <p class="alt">Or email <a href="mailto:contact@roundshealth.org">contact@roundshealth.org</a></p>
+      </section>
+
+      <footer class="reveal">&copy; 2026 Rounds</footer>
     </main>
   </body>
 </html>
