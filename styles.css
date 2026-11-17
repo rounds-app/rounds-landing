@@ -494,6 +494,129 @@ a {
   }
 }
 
+/* About us: the same team as the video's "Meet the Team" slide, Ahmad first. */
+.about {
+  width: 100%;
+  max-width: 980px;
+  margin-inline: auto;
+  padding: 28px 20px 30px;
+}
+
+.about .section-title em {
+  color: #4a5fd9;
+}
+
+.lead-member {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  max-width: 720px;
+  margin: 20px auto 0;
+  text-align: center;
+}
+
+.photo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex: none;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #f6f7fb, #e3e6f2);
+  box-shadow: 0 10px 26px -12px rgb(25 31 92 / 0.45);
+}
+
+.photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-lg {
+  width: 168px;
+  height: 168px;
+}
+
+.about .name {
+  margin-top: 10px;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.3px;
+}
+
+.lead-member .name {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.about .role {
+  margin-top: 6px;
+  font: 600 15px/1.3 var(--font-sans);
+  color: var(--ink-soft);
+}
+
+.about .extra {
+  margin-top: 2px;
+  font: 600 14px/1.3 var(--font-sans);
+  color: #4a5fd9;
+}
+
+.about .school {
+  margin-top: 4px;
+  font: 400 14px/1.35 var(--font-sans);
+  color: var(--muted);
+}
+
+.bio {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  text-wrap: pretty;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 12px;
+  margin: 34px 0 0;
+  padding: 28px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.team-note {
+  margin-top: 28px;
+  font-size: 16px;
+  color: var(--muted);
+  text-align: center;
+  text-wrap: balance;
+}
+
+@media (min-width: 720px) {
+  .members {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .lead-member {
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 28px;
+    text-align: left;
+    justify-items: start;
+  }
+}
+
 /* Desktop: the hero and the video share the first screen; the rest of the page scrolls below. */
 @media (min-width: 1024px) {
   .hero {
