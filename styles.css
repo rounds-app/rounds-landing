@@ -547,6 +547,7 @@ a {
   align-items: center;
   width: calc((100% - 12px) / 2);
   text-align: center;
+  container-type: inline-size;
 }
 
 .nw {
@@ -574,7 +575,10 @@ a {
 }
 
 .member .name {
-  font-size: 24px;
+  /* Full names stay on one line: the size follows the column (longest name is ~6.7em wide). */
+  font-size: 21px;
+  font-size: min(24px, 14cqi);
+  white-space: nowrap;
   line-height: 1.15;
   letter-spacing: -0.3px;
 }
@@ -627,7 +631,7 @@ a {
   }
 
   .member .name {
-    font-size: 28px;
+    font-size: min(28px, 14cqi);
   }
 }
 
