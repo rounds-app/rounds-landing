@@ -502,16 +502,12 @@ a {
   padding: 28px 20px 30px;
 }
 
-.about .section-title em {
-  color: #4a5fd9;
-}
-
 .lead-member {
   display: grid;
   justify-items: center;
   gap: 16px;
   max-width: 720px;
-  margin: 20px auto 0;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -593,14 +589,6 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.team-note {
-  margin-top: 28px;
-  font-size: 16px;
-  color: var(--muted);
-  text-align: center;
-  text-wrap: balance;
 }
 
 @media (min-width: 720px) {
