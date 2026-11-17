@@ -1,0 +1,22 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "color-function-alias-notation": null,
+    "media-feature-range-notation": null,
+    "no-descending-specificity": null,
+    "property-no-vendor-prefix": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreProperties": [
+          "/^--font/"
+        ]
+      }
+    ],
+    "declaration-empty-line-before": null
+  }
+}
