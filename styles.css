@@ -336,6 +336,17 @@ h3 {
   color: var(--muted);
 }
 
+.closing .site-footer,
+.closing .contact p,
+.closing .contact .alt {
+  text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 20px rgb(255 255 255 / 0.9);
+}
+
+.closing .site-footer {
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
 .site-footer a {
   color: var(--ink);
   text-decoration: none;
@@ -355,11 +366,21 @@ a {
 .closing {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 56px 16px 28px;
-  background:
-    linear-gradient(to bottom, var(--paper) 0%, rgb(253 251 248 / 0.75) 40%, rgb(253 251 248 / 0.25) 100%),
-    url("assets/world.jpg") center 30% / cover no-repeat;
+  gap: 56px;
+  padding: 40px 16px 28px;
+  position: relative;
+  isolation: isolate;
+}
+
+/* The painting is masked rather than covered, so its top edge is fully transparent and no seam shows. */
+.closing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("assets/world.jpg") center bottom / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 6%, rgb(0 0 0 / 0.15) 16%, rgb(0 0 0 / 0.45) 32%, rgb(0 0 0 / 0.8) 100%);
+  mask-image: linear-gradient(to bottom, transparent 6%, rgb(0 0 0 / 0.15) 16%, rgb(0 0 0 / 0.45) 32%, rgb(0 0 0 / 0.8) 100%);
 }
 
 .contact {
@@ -494,11 +515,7 @@ a {
 /* Team: one white panel on the watercolor, like the "Meet the Team" slide in the video.
    Four across, then three, centred. Lines only break between the chunks marked .nw. */
 .team-band {
-  margin-inline: calc(50% - 50vw);
-  padding: 72px 16px;
-  background:
-    linear-gradient(to bottom, var(--paper), transparent 22%, transparent 78%, var(--paper)),
-    url("assets/world.jpg") center / cover no-repeat;
+  width: 100%;
 }
 
 .team-panel {
@@ -511,16 +528,7 @@ a {
 }
 
 .team-panel h2 {
-  margin-bottom: 26px;
-  font-size: clamp(30px, 3.4vw, 40px);
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  text-align: center;
-}
-
-.team-panel h2 em {
-  color: #6a6fd6;
+  margin-bottom: 28px;
 }
 
 .members {
@@ -584,8 +592,8 @@ a {
 
 .member .school {
   margin-top: 2px;
-  font: 400 13px/1.35 var(--font-sans);
-  color: var(--muted);
+  font: 500 14px/1.35 var(--font-sans);
+  color: var(--ink-soft);
 }
 
 @media (min-width: 760px) {
