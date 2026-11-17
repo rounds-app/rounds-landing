@@ -380,6 +380,12 @@ h3 {
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+.team-link > span:last-child {
   white-space: nowrap;
 }
 
