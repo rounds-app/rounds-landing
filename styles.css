@@ -22,6 +22,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   overflow-x: clip;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -51,7 +52,7 @@ ol {
   width: 1px;
   height: 1px;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   white-space: nowrap;
 }
 
@@ -486,7 +487,8 @@ a {
 
 /* Below the fold, things rise as they come into view instead. */
 @supports (animation-timeline: view()) {
-  .sheet .reveal {
+  .sheet .reveal,
+  .closing .reveal {
     animation: rise linear backwards;
     animation-timeline: view();
     animation-range: entry 0% entry 60%;
@@ -499,6 +501,10 @@ a {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
 
@@ -571,6 +577,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: filter 0.2s ease;
 }
 
 .member .name {
@@ -590,22 +597,107 @@ a {
   color: #4a5fd9;
 }
 
+/* Every school in one quiet colour, a step below the role and the blue company line. */
 .member .school {
   font: 500 14px/20px var(--font-sans);
-  color: var(--ink-soft);
+  color: var(--muted);
 }
 
-/* Each school in a muted take on its own colour: Geisinger teal, Rutgers scarlet, Salisbury maroon-gold. */
-.member .geisinger {
-  color: #1f7a70;
+/* Each school carries its own small mark, sized to the text like a favicon. */
+.member .org-logo {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  border-radius: 3px;
+  vertical-align: -3px;
+  object-fit: contain;
 }
 
-.member .rutgers {
-  color: #b23a48;
+/* School and company names link out; they keep their colour and only underline on hover or focus. */
+.member a.school,
+.member a.company {
+  text-decoration: none;
+  border-radius: 4px;
 }
 
-.member .salisbury {
-  color: #96561f;
+.member a.company {
+  color: inherit;
+}
+
+.member a.school:hover,
+.member a.school:focus-visible,
+.member a.company:hover,
+.member a.company:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.member a.school:focus-visible,
+.member a.company:focus-visible {
+  outline: 2px solid currentcolor;
+  outline-offset: 2px;
+}
+
+/* A photo that links to LinkedIn: hovering the photo turns the photo grayscale under a soft
+   dark wash and shows a plain white icon. Touch screens have no hover, so there the icon
+   sits small at the bottom. */
+a.photo {
+  display: block;
+}
+
+.photo .linkedin {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: rgb(20 22 26 / 0.35);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.photo .linkedin svg {
+  width: 30px;
+  height: 30px;
+  transform: scale(0.85);
+  transition: transform 0.2s ease;
+}
+
+a.photo:hover img,
+a.photo:focus-visible img {
+  filter: grayscale(1);
+}
+
+a.photo:hover .linkedin,
+a.photo:focus-visible .linkedin {
+  opacity: 1;
+}
+
+a.photo:hover .linkedin svg,
+a.photo:focus-visible .linkedin svg {
+  transform: scale(1);
+}
+
+a.photo:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+}
+
+@media (hover: none) {
+  .photo .linkedin {
+    inset: auto 0 0;
+    padding: 4px 0 8px;
+    background: none;
+    opacity: 1;
+  }
+
+  .photo .linkedin svg {
+    width: 20px;
+    height: 20px;
+    transform: none;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.35));
+  }
 }
 
 @media (min-width: 760px) {
