@@ -322,6 +322,7 @@ h3 {
 }
 
 .contact .alt {
+  color: var(--ink-soft);
   font-size: 15px;
 }
 
@@ -352,32 +353,96 @@ h3 {
   margin-top: 8px;
 }
 
-footer {
+/* One quiet row under a hairline: the team link (with the faces, so it reads at a glance)
+   and the copyright. */
+.site-footer {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 24px;
+  padding: 22px 4px 8px;
+  border-top: 1px solid var(--line);
   font-family: var(--font-sans);
   font-size: 14px;
   font-weight: 500;
-  color: var(--ink-soft);
-  text-shadow: 0 0 6px #fff, 0 0 12px #fff;
-  text-align: center;
+  color: var(--muted);
+}
+
+.team-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.team-link:hover > span:last-child {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.team-link .arrow {
+  display: inline-block;
+  transition: transform 200ms ease;
+}
+
+.team-link:hover .arrow {
+  transform: translateX(3px);
+}
+
+.faces {
+  display: flex;
+}
+
+.faces img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--paper);
+  object-fit: cover;
+  object-position: 50% 15%;
+  background: radial-gradient(circle at 50% 35%, #eef0fb, #d9ddf3);
+}
+
+.faces img + img {
+  margin-left: -9px;
+}
+
+@media (max-width: 479px) {
+  .site-footer {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 a {
   color: #4a5fd9;
 }
 
-/* Closing call to action on the same white card as the steps: the heading, a welcome under it,
-   then the button on its own line. */
+/* Closing call to action: no card, so the page ends on open paper instead of a second box. */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 20px 16px 22px;
-  border: 1px solid rgb(125 143 230 / 0.4);
-  border-radius: 18px;
-  background: #fff;
-  box-shadow: 0 24px 60px -34px rgba(25, 31, 92, 0.45);
+  gap: 12px;
+  padding: 12px 16px 0;
   text-align: center;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 18px;
+  margin-top: 6px;
 }
 
 .contact h2 {
