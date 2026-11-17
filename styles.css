@@ -581,19 +581,31 @@ a {
 
 .member .role {
   margin-top: 6px;
-  font: 600 14px/1.35 var(--font-sans);
+  font: 600 14px/20px var(--font-sans);
   color: var(--ink);
 }
 
 .member .extra {
-  font: 600 13px/1.35 var(--font-sans);
+  font: 600 14px/20px var(--font-sans);
   color: #4a5fd9;
 }
 
 .member .school {
-  margin-top: 2px;
-  font: 500 14px/1.35 var(--font-sans);
+  font: 500 14px/20px var(--font-sans);
   color: var(--ink-soft);
+}
+
+/* Each school in a muted take on its own colour: Geisinger teal, Rutgers scarlet, Salisbury maroon-gold. */
+.member .geisinger {
+  color: #1f7a70;
+}
+
+.member .rutgers {
+  color: #b23a48;
+}
+
+.member .salisbury {
+  color: #96561f;
 }
 
 @media (min-width: 760px) {
