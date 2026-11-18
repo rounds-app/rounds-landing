@@ -1,0 +1,372 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.420
+Every day, doctors make their
+rounds, patient by patient.
+
+2
+00:00:04.020 --> 00:00:07.240
+Students need those reps too, but
+practice patients are hard to find.
+
+3
+00:00:07.720 --> 00:00:09.340
+Rounds puts one on call, anytime.
+
+4
+00:00:10.000 --> 00:00:12.640
+Talk to them out loud, then
+see exactly what you missed.
+
+5
+00:00:14.940 --> 00:00:19.340
+My name's Ahmad Higazy, and I'm a fourth-year
+medical student at the Geisinger Commonwealth
+
+6
+00:00:19.340 --> 00:00:20.280
+School of Medicine.
+
+7
+00:00:20.960 --> 00:00:24.700
+Working alongside a team of software
+engineers and biochemists, we've been
+
+8
+00:00:24.700 --> 00:00:25.380
+tackling a problem
+
+9
+00:00:25.380 --> 00:00:30.000
+that I faced in my own medical education
+experience, and that's providing realistic
+
+10
+00:00:30.000 --> 00:00:34.800
+clinical simulation for medical students in
+the preclinical phase of their curriculum.
+
+11
+00:00:35.680 --> 00:00:39.520
+Now, the canonical way it's done with
+standardized patients is cost-intensive
+
+12
+00:00:39.520 --> 00:00:40.700
+and not flexible
+
+13
+00:00:40.700 --> 00:00:45.440
+enough to accommodate the necessary experience
+students need before entering the clinical
+
+14
+00:00:45.440 --> 00:00:45.860
+space.
+
+15
+00:00:46.240 --> 00:00:50.000
+And that's why we built Rounds, which is an
+immersive clinical experience that can be
+
+16
+00:00:50.000 --> 00:00:51.000
+built in minutes.
+
+17
+00:00:51.320 --> 00:00:52.040
+Let's dive right in.
+
+18
+00:00:52.440 --> 00:00:56.360
+So, Rounds was built keeping in mind
+both the educator and the learner.
+
+19
+00:00:56.360 --> 00:01:00.140
+On the educator side of things,
+we've streamlined case creation.
+
+20
+00:01:00.700 --> 00:01:02.340
+So here you can tap to describe the case.
+
+21
+00:01:02.700 --> 00:01:08.800
+Let's say we want a case for a third-year
+medical student involving Legionella pneumonia
+
+22
+00:01:09.340 --> 00:01:15.200
+in a middle-aged male that takes
+lisinopril for their hypertension.
+
+23
+00:01:15.860 --> 00:01:20.920
+And when the student elicits their travel
+history, the patient will mention that they've
+
+24
+00:01:20.920 --> 00:01:26.140
+recently been to a conference in Philadelphia
+where they believe they caught a cold due
+
+25
+00:01:26.140 --> 00:01:29.460
+to the freezing cold air
+conditioning units there.
+
+26
+00:01:29.740 --> 00:01:33.560
+And from there, we have this
+populated and then we build the case.
+
+27
+00:01:34.060 --> 00:01:37.880
+So after submitting your description of the
+case, a state-of-the-art large language model
+
+28
+00:01:37.880 --> 00:01:40.540
+interprets it and fills in
+the rest of the picture.
+
+29
+00:01:40.800 --> 00:01:44.980
+You can go back and forth here and continuously
+refine the picture until it's just how you
+
+30
+00:01:44.980 --> 00:01:45.340
+like it.
+
+31
+00:01:45.900 --> 00:01:51.780
+So following this, you're greeted with a
+page that displays a wide variety of options
+
+32
+00:01:51.780 --> 00:01:54.860
+that faculty can use to customize
+the experience for students.
+
+33
+00:01:54.860 --> 00:01:57.660
+Once you're ready to
+publish, you hit complete.
+
+34
+00:01:58.580 --> 00:02:01.780
+So now that the case has been built, let's
+go and see what a student experiences.
+
+35
+00:02:02.420 --> 00:02:05.600
+Now students are greeted with a dashboard
+that includes their recent performance on
+
+36
+00:02:05.600 --> 00:02:09.260
+cases and cases left to do,
+including the case we just made.
+
+37
+00:02:09.800 --> 00:02:13.540
+Now upon opening a case, a wide
+variety of information is displayed.
+
+38
+00:02:13.880 --> 00:02:16.600
+Once you're ready to begin the call,
+you can hit connect microphone.
+
+39
+00:02:16.960 --> 00:02:18.000
+What's been bothering you most?
+
+40
+00:02:18.740 --> 00:02:20.200
+My wife made me come in.
+
+41
+00:02:20.780 --> 00:02:22.700
+I've had a fever and this cough.
+
+42
+00:02:23.260 --> 00:02:26.420
+And now just walking to the
+kitchen leaves me out of breath.
+
+43
+00:02:27.400 --> 00:02:28.920
+Have you been around anyone who's been ill?
+
+44
+00:02:29.660 --> 00:02:31.640
+Maybe at this work conference in Philadelphia.
+
+45
+00:02:32.440 --> 00:02:34.940
+The AC was blasting the whole time.
+
+46
+00:02:35.560 --> 00:02:37.440
+I figured I'd picked up a cold there.
+
+47
+00:02:38.300 --> 00:02:42.180
+Your fever, cough, and worsening breathing
+makes me concerned about pneumonia,
+
+48
+00:02:42.940 --> 00:02:43.940
+an infection in the lungs.
+
+49
+00:02:44.820 --> 00:02:45.240
+Pneumonia?
+
+50
+00:02:45.880 --> 00:02:47.460
+Could I have caught that at the hotel?
+
+51
+00:02:48.180 --> 00:02:51.700
+The combined depth across our team's
+disciplines allowed us to build something
+
+52
+00:02:51.700 --> 00:02:55.200
+more than just a virtual patient
+or a simulated environment.
+
+53
+00:02:55.940 --> 00:02:57.500
+At the center, we built a critic,
+
+54
+00:02:57.880 --> 00:03:00.620
+a personalized model of each
+student's clinical decision making.
+
+55
+00:03:01.500 --> 00:03:06.040
+Our virtual patient used an LLM
+which defined clinical personas and
+
+56
+00:03:06.040 --> 00:03:09.760
+behavioral priors that dynamically
+respond to each of the student's strong
+
+57
+00:03:09.760 --> 00:03:11.680
+suits and weak points.
+
+58
+00:03:12.340 --> 00:03:15.040
+Meanwhile, our critic combines TF-IDF
+
+59
+00:03:15.480 --> 00:03:19.520
+logistic regression to classify
+actions with an LLM evaluator to
+
+60
+00:03:19.520 --> 00:03:20.820
+assess clinical performance.
+
+61
+00:03:21.400 --> 00:03:25.940
+These evaluations create interpretable
+profiles that drive evidence-based debriefs.
+
+62
+00:03:26.200 --> 00:03:29.400
+We explored every dataset provided
+and used about 70% of it.
+
+63
+00:03:29.840 --> 00:03:35.080
+Almost 7,000 labeled communication turns
+and nearly 300 clinical interviews.
+
+64
+00:03:35.560 --> 00:03:38.340
+And we developed 900 action
+classification examples.
+
+65
+00:03:39.020 --> 00:03:42.380
+Comparing our simulated learning to
+real studies on active scenarios,
+
+66
+00:03:42.780 --> 00:03:46.720
+our next target is a 25%
+reduction in time to competency.
+
+67
+00:03:47.400 --> 00:03:51.540
+That's before counting that students
+can practice here any time,
+
+68
+00:03:51.720 --> 00:03:54.760
+far more often than an actor
+could ever be scheduled.
+
+69
+00:03:55.920 --> 00:03:59.100
+Although our aim was ultimately to build
+fast, we knew that we had to do it right.
+
+70
+00:03:59.880 --> 00:04:02.840
+From the very beginning, we knew that we
+were going to use the industry standard
+
+71
+00:04:02.840 --> 00:04:07.800
+of AWS services, going from reliable
+databases to serverless compute,
+
+72
+00:04:08.740 --> 00:04:12.280
+frontier large language models using
+Bedrock, transcription tools using
+
+73
+00:04:12.280 --> 00:04:16.520
+HealthScribe, which many may be familiar
+with, and user authentication using Cognito.
+
+74
+00:04:16.900 --> 00:04:19.240
+So that means that we might not have
+to memorize all these passwords,
+
+75
+00:04:19.800 --> 00:04:23.900
+using things such as OIDC to integrate
+into your already existing workflows.
+
+76
+00:04:24.800 --> 00:04:27.940
+In addition to AWS, we also made
+sure to use specialized speech and
+
+77
+00:04:27.940 --> 00:04:32.640
+video generation AI models using ElevenLabs
+and Tavus, utilizing state-of-the-art
+
+78
+00:04:32.640 --> 00:04:35.820
+models to provide unique and memorable
+value to our next generation of
+
+79
+00:04:35.820 --> 00:04:36.440
+medical professionals.
